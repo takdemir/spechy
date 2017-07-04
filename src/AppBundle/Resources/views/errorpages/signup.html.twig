@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Karattravel Driver</title>
+
+    <!-- Bootstrap -->
+    <link href="{{ asset('Assets/vendors/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{{ asset('Assets/vendors/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="{{ asset('Assets/vendors/nprogress/nprogress.css') }}" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="{{ asset('Assets/vendors/animate.css/animate.min.css') }}" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="{{ asset('Assets/build/css/custom.min.css') }}" rel="stylesheet">
+    {#<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>#}
+    <script src="{{ asset('Assets/vendors/jquery/dist/jquery.min.js') }}"></script>
+    <script src="{{ asset('Assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+</head>
+
+<body class="login">
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper" style="max-width: 550px;">
+
+        <div id="register" class="animate form registration_form" style="opacity: 1;">
+            <section class="login_content">
+
+                {% include "@App/alertmessages.html.twig" %}
+
+                {% include "@App/signup_form.html.twig" %}
+
+                <div class="clearfix"></div>
+
+                <div class="separator">
+                    <p class="change_link">Üye misiniz?
+                        <a href="{{ path("login") }}" class="to_register"> Giriş </a>
+                    </p>
+
+                    <div class="clearfix"></div>
+                    <br />
+
+                    <div>
+                        <h1><i class="fa fa-paw"></i> Karattravel Driver</h1>
+                        <p>©2017 Tüm Hakları Saklıdır!</p>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

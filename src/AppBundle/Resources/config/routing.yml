@@ -1,3 +1,27 @@
+#Default Controller
+
 homepage:
   path: /
   defaults: {_controller: AppBundle:Default:index}
+
+
+
+
+
+#SecurityController
+
+login:
+  path: /login
+  defaults:  {_controller: AppBundle:Security:login}
+
+logout:
+  path: /logout
+  defaults: {_controller: AppBundle:Security:logout}
+
+signup:
+  path: /signup
+  defaults: {_controller: AppBundle:Security:signup}
+
+passwordreminder:
+  path: /passwordreminder
+  defaults: {_controller: AppBundle:Security:passwordreminder}

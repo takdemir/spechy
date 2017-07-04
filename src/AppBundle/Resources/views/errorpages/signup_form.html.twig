@@ -1,0 +1,109 @@
+<h1>Hesap Oluştur</h1>
+
+{{ form_start(signupform,{'attr':{'class':'form-horizontal form-label-left','autocomplete':'off'}}) }}
+
+<div class="form-group">
+    {{ form_label(signupform.name,"Adınız Soyadınız",{"label_attr":{"class":"control-label col-md-3 col-sm-3 col-xs-12"}}) }}
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        {{ form_widget(signupform.name,{"attr": {"class":"form-control col-md-12 col-sm-12 col-xs-12","placeholder":"Adınız Soyadınız","data-parsley-id":5}}) }}
+        {% if form_errors(signupform.name) %}
+            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                <li class="parsley-required">{{ form_errors(signupform.name) }}</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
+
+<div class="form-group">
+    {{ form_label(signupform.email,"E-Mail",{"label_attr":{"class":"control-label col-md-3 col-sm-3 col-xs-12"}}) }}
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        {{ form_widget(signupform.email,{"attr": {"class":"form-control col-md-12 col-sm-12 col-xs-12","placeholder":"E-Mail","data-parsley-id":5}}) }}
+        {% if form_errors(signupform.email) %}
+            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                <li class="parsley-required">{{ form_errors(signupform.email) }}</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
+
+<div class="form-group">
+    {{ form_label(signupform.password,"Şifre",{"label_attr":{"class":"control-label col-md-3 col-sm-3 col-xs-12"}}) }}
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        {{ form_widget(signupform.password,{"attr": {"class":"form-control col-md-12 col-sm-12 col-xs-12","placeholder":"Şifre","data-parsley-id":5}}) }}
+        {% if form_errors(signupform.password) %}
+            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                <li class="parsley-required">{{ form_errors(signupform.password) }}</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
+
+
+<div class="form-group">
+    {{ form_label(signupform.city,"Şehir",{"label_attr":{"class":"control-label col-md-3 col-sm-3 col-xs-12"}}) }}
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        {{ form_widget(signupform.city,{"attr": {"class":"form-control col-md-12 col-sm-12 col-xs-12","data-parsley-id":5}}) }}
+        {% if form_errors(signupform.city) %}
+            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                <li class="parsley-required">{{ form_errors(signupform.city) }}</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
+
+
+<div class="form-group">
+    {{ form_label(signupform.district,"İlçe",{"label_attr":{"class":"control-label col-md-3 col-sm-3 col-xs-12"}}) }}
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        {{ form_widget(signupform.district,{"attr": {"class":"form-control col-md-12 col-sm-12 col-xs-12","data-parsley-id":5}}) }}
+        {% if form_errors(signupform.district) %}
+            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                <li class="parsley-required">{{ form_errors(signupform.district) }}</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
+
+
+<div class="form-group">
+    {{ form_label(signupform.address,"Adres",{"label_attr":{"class":"control-label col-md-3 col-sm-3 col-xs-12"}}) }}
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        {{ form_widget(signupform.address,{"attr": {"class":"form-control col-md-12 col-sm-12 col-xs-12","data-parsley-id":5,"style":"resize: false"}}) }}
+        {% if form_errors(signupform.address) %}
+            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                <li class="parsley-required">{{ form_errors(signupform.address) }}</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
+
+
+<div class="form-group">
+    {{ form_label(signupform.phonePrivate,"Cep Telefonu",{"label_attr":{"class":"control-label col-md-3 col-sm-3 col-xs-12"}}) }}
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        {{ form_widget(signupform.phonePrivate,{"attr": {"class":"form-control col-md-12 col-sm-12 col-xs-12","placeholder":"Cep Telefonu","data-parsley-id":5}}) }}
+        {% if form_errors(signupform.phonePrivate) %}
+            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                <li class="parsley-required">{{ form_errors(signupform.phonePrivate) }}</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
+
+<div class="form-group">
+    {{ form_label(signupform.phoneCompany,"İş Telefonu",{"label_attr":{"class":"control-label col-md-3 col-sm-3 col-xs-12"}}) }}
+    <div class="col-md-9 col-sm-9 col-xs-12">
+        {{ form_widget(signupform.phoneCompany,{"attr": {"class":"form-control col-md-12 col-sm-12 col-xs-12","placeholder":"İş Telefonu","data-parsley-id":5}}) }}
+        {% if form_errors(signupform.phoneCompany) %}
+            <ul class="parsley-errors-list filled" id="parsley-id-5">
+                <li class="parsley-required">{{ form_errors(signupform.phoneCompany) }}</li>
+            </ul>
+        {% endif %}
+    </div>
+</div>
+
+<div>
+    {{ form_widget(signupform.save,{"attr": {"class":"btn btn-default submit"}}) }}
+</div>
+
+{{ form_end(signupform) }}
